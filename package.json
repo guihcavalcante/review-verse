@@ -1,0 +1,24 @@
+{
+  "name": "review-verse",
+  "version": "1.0.0",
+  "description": "Rede social pública de avaliações de mídias, onde qualquer usuário pode criar uma conta, publicar suas próprias reviews e interagir com a comunidade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guihcavalcante/review-verse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/guihcavalcante/review-verse/issues"
+  },
+  "homepage": "https://github.com/guihcavalcante/review-verse#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

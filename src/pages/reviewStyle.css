@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#caixa {
+    padding: 30px;
+    margin: 250px;
+    width: 950px;
+    height: 250px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.star {
+    font-size: 35px;
+    color: gray;
+    cursor: pointer;
+}
+
+#mensagem {
+    width: 400px;
+    height: 150px;
+    resize: none;
+    box-sizing: border-box;
+}

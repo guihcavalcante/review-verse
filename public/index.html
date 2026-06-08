@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/style.css">
     <title>Review verse</title>
 </head>
 <body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <img class="logo" src="assets/images/Logo Horizontal.png" alt="Logo Review-Verse">
+        </div> 
 
+        <div class="navbar-center">
+            <input type="text" placeholder="🔎 Pesquisar review..." class="search-bar">
+        </div>
+
+        <div class="navbar-right">
+            <button class="btn-review">+Nova Review</button>
+            <div class="user-avatar">🙍🏼‍♂️</div>
+        </div>
+    </header>
+
+    <main class="feed-container">
+        <article class="review-card">
+            <div class="card-header">
+                <div class="user-info">
+                    <span class="avatar">🙍🏼‍♂️</span>
+                    <span class="username">José Silva</span>
+                </div>
+
+                <span class="category-tag tag-movie">Filme</span>
+            </div>
+
+            <div class="card-content">
+                <h2 class="review-title">Ta Chovendo Hamburguer 2 (2013)</h2>
+                <p class="review-text">Uma obra-prima muito engraçado e com uma história cativante.</p>
+                <div class="review-rating">⭐ 4/5</div>
+            </div>
+
+            <div class="card-actions">
+                <div class="action-buttons">
+                    <button class="btn-action">❤️ Curtir</button>
+                    <button class="btn-action">💬 Comentar</button>
+                </div>
+                <input type="text" class="comment-input" placeholder="Deixe sua opinião...">
+            </div>
+        </article>
+
+        <article class="review-card">
+            <div class="card-header">
+                <div class="user-info">
+                    <span class="avatar">🙍🏼‍♀️</span>
+                    <span class="username">Mariana Costa</span>
+                </div>
+                
+                <span class="category-tag tag-game">Jogo</span>
+            </div>
+
+            <div class="card-content">
+                <h2 class="review-title">Brawl Stars</h2>
+                <p class="review-text">Um jogo fascinante, extremamente divertido.</p>
+                <div class="review-rating">⭐ 4/5</div>
+            </div>
+
+            <div class="card-actions">
+                <div class="action-buttons">
+                    <button class="btn-action">❤️ Curtir</button>
+                    <button class="btn-action">💬 Comentar</button>
+                </div>
+
+                <input type="text" class="comment-input" placeholder="Deixe sua opinião...">
+            </div>
+        </article>
+
+        <article class="review-card">
+            <div class="card-header">
+                <div class="user-info">
+                    <span class="avatar">🙍🏼</span>
+                    <span class="username">Rodrigo Alves</span>
+                </div>
+
+                <span class="category-tag tag-book">Livro</span>
+            </div>
+
+            <div class="card-content">
+                <h2 class="review-title">1984 - George Orwell</h2>
+                <p class="review-text">Um clássico extremamente radical e fascinante.</p>
+                <div class="review-rating">⭐ 4/5</div>
+            </div>
+
+            <div class="card-actions">
+                <div class="action-buttons">
+                    <button class="btn-action">❤️ Curtir</button>
+                    <button class="btn-action">💬 Comentar</button>
+                </div>
+
+                <input type="text" class="comment-input" placeholder="Deixe sua opinião...">
+            </div>
+        </article>
+    </main>
+    
 </body>
 </html>

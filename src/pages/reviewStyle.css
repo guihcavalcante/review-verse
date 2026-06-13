@@ -49,8 +49,20 @@ body{
 
 .star {
     font-size: 35px;
-    color: gray;
+    color: #4a4a4a;
     cursor: pointer;
+    transition: color 0.2 ease, transform 0.1 ease, text-shadow 0.2 ease;
+}
+
+.star:hover{
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+    transform: scale(1.1);
+}
+
+.star.active {
+    color: #a855f7;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
 }
 
 #mensagem {

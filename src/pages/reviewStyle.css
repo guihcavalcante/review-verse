@@ -1,15 +1,50 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c20 0%, #060614 100%);
 }
 
 #caixa {
-    padding: 30px;
-    margin: 250px;
-    width: 950px;
-    height: 250px;
-    text-align: center;
-    border: 2px solid black;
+    width: 450px;
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(106, 17, 203, 0.15);
+    backdrop-filter: blur(10px);
+
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+#titulo {
+    font-size: 24px;         
+    font-weight: 700;        
+    letter-spacing: -0.5px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    
+    background: linear-gradient(90deg, #2575fc 0%, #a255ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    filter: drop-shadow(0px 2px 8px rgba(37, 117, 252, 0.3));
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    align-items: center;
 }
 
 .star {
@@ -19,8 +54,87 @@
 }
 
 #mensagem {
-    width: 400px;
-    height: 150px;
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
     resize: none;
-    box-sizing: border-box;
+    outline: none;
+}
+
+#usuario, #mensagem {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#usuario {
+    height: 45px;
+}
+
+#usuario:focus, #mensagem:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+#midia {
+    width: 100%;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0 12px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    appearance: none; 
+    -webkit-appearance: none;
+    
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path fill='white' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/></svg>");
+    
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+}
+
+#midia:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+}
+
+#midia option {
+    background: #0f0c20;
+    color: #ffffff;
+}
+
+#usuario::placeholder {
+    color: #8a8a9e;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }

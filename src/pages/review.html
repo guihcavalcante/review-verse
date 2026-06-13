@@ -1,45 +1,50 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reviewStyle.css" />
-    <script type="module" src="index.js" defer></script>
-    <title>Review-verse</title>
-  </head>
-  <body>
-    <div id="caixa">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reviewStyle.css" />
+  <script type="module" src="index.js" defer></script>
+  <title>Review-verse</title>
+</head>
+
+<body>
+  <div id="caixa">
     <form id="form">
-      <!-- TÍTULO DA OBRA -->
-      <label for="usuario">Título da Obra</label>
-      <input type="text" id="usuario" placeholder="Nome da Obra" required>
+      
+        <!-- TÍTULO DA OBRA -->
+        <label id="titulo" for="usuario">Título da Obra</label>
+        <input type="text" id="usuario" placeholder="Nome da Obra" required>
 
-      <!-- TIPO DA MÍDIA -->
-      <label>Tipo de Mídia</label>
-      <select required>
-        <option value="jogos">Jogos</option>
-        <option value="filme">Filme</option>
-        <option value="serie">Série</option>
-        <option value="livro">Livro</option>
-        <option value="outros">Outro</option>
-      </select>
+        <!-- TIPO DA MÍDIA -->
+        <label id="titulo">Tipo de Mídia</label>
+        <select id="midia" required>
+          <option value="jogos">Jogos</option>
+          <option value="filme">Filme</option>
+          <option value="serie">Série</option>
+          <option value="livro">Livro</option>
+          <option value="outros">Outro</option>
+        </select>
 
-      <!-- NOTA -->
-      <div class="stars">
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>    
-      </div>
+        <!-- NOTA -->
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
 
-      <!-- REVIEW -->
-    <textarea id="mensagem" placeholder="Digite sua Review" required></textarea>
+        <!-- REVIEW -->
+        <textarea id="mensagem" placeholder="Digite sua Review" required></textarea>
 
-    <!-- ENVIAR -->
-    <button type="submit">Publicar Review</button>
-    </form> 
-    </div>
-    
-  </body>
+        <!-- ENVIAR -->
+        <button type="submit">Publicar Review</button>
+      
+    </form>
+
+  </div>
+</body>
+
 </html>

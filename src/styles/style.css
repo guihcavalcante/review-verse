@@ -144,3 +144,261 @@ body {
     background-color: #fef3c7;
     color: #d97706;
 }
+
+.card-content {
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.review-rating {
+    font-size: 14px;
+    font-weight: 700;
+    color: #b45309;
+    background-color: #fffbeb;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.card-actions {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.btn-action {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    color: #4f46e5;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.comment-input:focus {
+    border-color: #4f46e5;
+}
+
+@media (max-width: 900px) {
+    .feed-container {
+        grid-template-columns: 1fr;
+        margin: 16px auto;
+    }
+
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .navbar-center {
+        display: none;
+    }
+}
+
+/* ESTRUTURA DO MODAL (ADICIONADO PARA CORREÇÃO) */
+.modal-formulario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 12, 32, 0.7); /* Mesma cor do fundo original dele com transparência */
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-formulario #caixa {
+    width: 450px;
+    background: #0f0c20; /* Fundo fixado para manter as letras brancas legíveis */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(106, 17, 203, 0.4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-formulario #titulo {
+    font-size: 24px;         
+    font-weight: 700;        
+    letter-spacing: -0.5px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+    
+    background: linear-gradient(90deg, #2575fc 0%, #a255ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    filter: drop-shadow(0px 2px 8px rgba(37, 117, 252, 0.3));
+}
+
+.modal-formulario #form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-formulario .star {
+    font-size: 35px;
+    color: #4a4a4a;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease, text-shadow 0.2s ease;
+}
+
+.modal-formulario .star:hover{
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+    transform: scale(1.1);
+}
+
+.modal-formulario .star.active {
+    color: #a855f7;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+}
+
+.modal-formulario #mensagem {
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    resize: none;
+    outline: none;
+}
+
+.modal-formulario #usuario {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: 45px;
+}
+
+.modal-formulario #usuario:focus, .modal-formulario #mensagem:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+.modal-formulario #midia {
+    width: 100%;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0 12px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    appearance: none; 
+    -webkit-appearance: none;
+    
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path fill='white' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/></svg>");
+    
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+}
+
+.modal-formulario #midia:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+}
+
+.modal-formulario #midia option {
+    background: #0f0c20;
+    color: #ffffff;
+}
+
+.modal-formulario #usuario::placeholder {
+    color: #8a8a9e;
+}
+
+.modal-formulario button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    margin-top: 10px;
+}
+
+.modal-formulario button[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* BOTÃO FECHAR (ADICIONADO PARA CORREÇÃO) */
+.modal-formulario #btn-close-modal {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #8a8a9e;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.modal-formulario #btn-close-modal:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
